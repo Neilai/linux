@@ -21,7 +21,7 @@
             pthread_mutex_lock(&mutex);              
             cnt = cnt+1;  
             printf("producer  %d is producing data\n",*((int*)arg));  
-            printf("the number is  %d\n", cnt % MAX);  
+            printf("the number is  %d\n", cnt);  
       	   sleep(1);
              pthread_mutex_unlock(&mutex);  
               
@@ -42,7 +42,7 @@
             
            cnt= cnt-1 ;  
            printf("consumer %d is consuming data\n",*((int*)arg));
-           printf("the number is %d\n", cnt % MAX);  
+           printf("the number is %d\n", cnt);  
       	 sleep(1);
            pthread_mutex_unlock(&mutex);  
  
